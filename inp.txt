@@ -1,0 +1,33 @@
+~/Desktop/aos-assign/new_after  
+lokesh
+struct stat st;
+stat(s.c_str(), &st);
+if ((st.st_mode & S_IFMT) == S_IFDIR)
+else if ((st.st_mode & S_IFMT) == S_IFREG)
+
+rename ERSDFSDFSDFSDFSDFD SDFSDFSDFSDFDSFDS
+
+char ch;
+  string s ;
+  getline (cin , s);
+  vector<string> v;
+  string input = "";
+
+  for (int i = 0; i < s.length() ; ++i)
+  {
+    string m = "";
+    m += s[i];
+    if (m != " ")
+    {
+      input += m;
+
+    }
+    else if (m == " ")
+    {
+      v.push_back(input);
+      input = "";
+    }
+
+
+  }
+  v.push_back(input);return v;

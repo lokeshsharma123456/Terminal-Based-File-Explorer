@@ -1,0 +1,1391 @@
+[2J[1;1H[2J[1;1Hrwxrwxr-x	 6	lokesh	lokesh	    4.00 KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  1.68   KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  3.89   KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [Hcurr_dir :/home/lokesh/Desktop/aos-assign/.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  6.15   KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  36.12  KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  38.33  KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [Hcurr_dir :/home/lokesh/Desktop/aos-assign/.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  40.59  KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [Hcurr_dir :/home/lokesh/Desktop/aos-assign/./.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxrwxr-x	8 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:56:05 2022	.git      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	4 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 21:53:37 2022	BIN       
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 00:30:40 2022	a.out     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  1.03   KB	  Thu Sep  1 11:15:14 2022	all links 
+rw-rw-r--	1 	lokesh	lokesh	  0.75   KB	  Tue Aug 30 16:54:04 2022	all_header.h
+rwxrwxr-x	2 	lokesh	lokesh	  4.00   KB	  Fri Sep  2 10:44:50 2022	assign    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:43:22 2022	check.txt 
+rwxrwxr-x	1 	lokesh	lokesh	  29.48  KB	  Sun Sep  4 21:33:52 2022	delete    
+rw-rw-r--	1 	lokesh	lokesh	  3.18   KB	  Sun Sep  4 21:33:52 2022	delete.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.09   KB	  Sun Sep  4 00:05:01 2022	hi.cpp    
+rwxrwxr-x	1 	lokesh	lokesh	  125.94 KB	  Mon Sep  5 12:06:30 2022	important 
+rw-rw-r--	1 	lokesh	lokesh	  20.53  KB	  Mon Sep  5 00:30:06 2022	important.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.52   KB	  Sun Sep  4 18:36:43 2022	input.txt 
+rw-rw-rw-	1 	lokesh	lokesh	  0.01   KB	  Sat Sep  3 22:27:15 2022	lokesh.txt
+rwxrwxr-x	1 	lokesh	lokesh	  84.70  KB	  Sun Sep  4 01:07:08 2022	main      
+rw-rw-r--	1 	lokesh	lokesh	  8.82   KB	  Sun Sep  4 01:07:07 2022	main.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  101.23 KB	  Fri Sep  2 18:37:01 2022	main2     
+rw-rw-r--	1 	lokesh	lokesh	  7.64   KB	  Fri Sep  2 00:58:38 2022	main2.cpp 
+rw-rw-r--	1 	lokesh	lokesh	  42.85  KB	  Mon Sep  5 12:06:30 2022	output.txt
+rwxrwxr-x	1 	lokesh	lokesh	  24.03  KB	  Sun Sep  4 14:45:54 2022	path      
+rw-rw-r--	1 	lokesh	lokesh	  12.79  KB	  Sun Sep  4 14:51:00 2022	path.cpp  
+rwxrwxr-x	1 	lokesh	lokesh	  35.41  KB	  Mon Sep  5 00:03:51 2022	test      
+rw-rw-r--	1 	lokesh	lokesh	  11.55  KB	  Mon Sep  5 00:03:50 2022	test.cpp  
+rw-rw-r--	1 	lokesh	lokesh	  5.54   KB	  Tue Aug 30 19:29:14 2022	untitled.cpp
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Sun Sep  4 18:45:57 2022	x1.txt    
+29
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././././././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././././././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [Hcurr_dir :/home/lokesh/./././././.
+[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H[2J[1;1H[2J[1;1Hrwxrwxr-x	6 	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:06:30 2022	.         
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	..        
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.bash_history
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.cache    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.config   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnome    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gnupg    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.gphoto   
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.local    
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.npm      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.pki      
+rwxr-xr-x	14	lokesh	lokesh	  4.00   KB	  Mon Sep  5 12:05:55 2022	.ssh      
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	.vscode   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Desktop   
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Documents 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloads 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Downloadsimportant.cpp
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	ITBP.pdf  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Jul 29 00h24.svgz
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Music     
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Pictures  
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Public    
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Templates 
+rwxrwxr-x	3 	lokesh	lokesh	  4.00   KB	  Sun Sep  4 11:37:04 2022	Videos    
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	a.txt     
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	chrome-hbbgijgemgpfmkadmiglbdpfchiljnoh-Default.desktop
+rw-rw-r--	1 	lokesh	lokesh	  0.00   KB	  Fri Sep  2 00:59:24 2022	snap      
+27
+ [H
