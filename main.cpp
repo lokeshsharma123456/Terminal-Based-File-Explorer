@@ -252,6 +252,152 @@ void delete_dir(string);
 string name_of_folder(string); // get path from back upto 1st '/'
 void rename(string, int, vector<string>);
 
+// One stat per entry, cached on the Entry. Renderer never stats again,
+// so we tolerate files vanishing mid-session.
+static std::vector<Entry> list_dir(const std::string &path)
+{
+	std::vector<Entry> out;
+	DIR *d = opendir(path.c_str());
+	if (!d)
+		return out;
+	struct dirent *e;
+	while ((e = readdir(d)) != nullptr)
+	{
+		if (std::strcmp(e->d_name, ".") == 0)
+			continue;
+		Entry ent;
+		ent.name = e->d_name;
+		struct stat st{};
+		if (lstat((path + "/" + ent.name).c_str(), &st) == 0)
+		{
+			ent.stat_ok = true;
+			ent.mode = st.st_mode;
+			ent.size = st.st_size;
+			ent.mtime = st.st_mtime;
+			// follow symlinks for directory classification
+			if (S_ISLNK(st.st_mode))
+			{
+				struct stat tgt{};
+				if (stat((path + "/" + ent.name).c_str(), &tgt) == 0)
+					ent.is_directory = S_ISDIR(tgt.st_mode);
+			}
+			else
+			{
+				ent.is_directory = S_ISDIR(st.st_mode);
+			}
+		}
+		out.push_back(std::move(ent));
+	}
+	closedir(d);
+	std::sort(out.begin(), out.end(), [](const Entry &a, const Entry &b)
+			  {
+        if (a.is_directory != b.is_directory) return a.is_directory > b.is_directory;
+        return a.name < b.name; });
+	return out;
+}
+
+static std::string perm_string(mode_t m)
+{
+	std::string s;
+	s += (S_ISDIR(m) ? 'd' : '-');
+	s += (m & S_IRUSR ? 'r' : '-');
+	s += (m & S_IWUSR ? 'w' : '-');
+	s += (m & S_IXUSR ? 'x' : '-');
+	s += (m & S_IRGRP ? 'r' : '-');
+	s += (m & S_IWGRP ? 'w' : '-');
+	s += (m & S_IXGRP ? 'x' : '-');
+	s += (m & S_IROTH ? 'r' : '-');
+	s += (m & S_IWOTH ? 'w' : '-');
+	s += (m & S_IXOTH ? 'x' : '-');
+	return s;
+}
+
+static std::string human_size(off_t bytes)
+{
+	static const char *units[] = {"B", "K", "M", "G", "T"};
+	double v = (double)bytes;
+	int u = 0;
+	while (v >= 1024.0 && u < 4)
+	{
+		v /= 1024.0;
+		++u;
+	}
+	std::ostringstream os;
+	os << std::fixed << std::setprecision(u == 0 ? 0 : 1) << v << units[u];
+	return os.str();
+}
+
+static std::string short_time(time_t t)
+{
+	char buf[32];
+	struct tm *tm = localtime(&t);
+	strftime(buf, sizeof(buf), "%b %d %H:%M", tm);
+	return buf;
+}
+
+static void render(const std::string &cwd,
+				   const std::vector<Entry> &entries,
+				   int cursor,
+				   int scroll,
+				   const std::string &status)
+{
+	WinSize ws = term_size();
+	int header_rows = 2;
+	int footer_rows = 2;
+	int avail = ws.rows - header_rows - footer_rows;
+	if (avail < 1)
+		avail = 1;
+
+	clear_screen();
+
+	// Header
+	std::cout << ANSI_BOLD << ANSI_CYAN << " <LOKESH /> Terminal File Explorer " << ANSI_RESET
+			  << ANSI_DIM << "  " << cwd << ANSI_RESET << "\n";
+	std::cout << ANSI_DIM
+			  << " perms       size   modified         name" << ANSI_RESET << "\n";
+
+	// Body — uses cached stat from list_dir, no per-frame syscalls
+	int end = std::min((int)entries.size(), scroll + avail);
+	for (int i = scroll; i < end; ++i)
+	{
+		const Entry &e = entries[i];
+		bool selected = (i == cursor);
+		if (selected)
+			std::cout << ANSI_INV;
+
+		if (e.stat_ok)
+		{
+			std::cout << " " << perm_string(e.mode) << "  "
+					  << std::setw(6) << std::right << human_size(e.size) << "  "
+					  << short_time(e.mtime) << "   ";
+		}
+		else
+		{
+			std::cout << " ?????????      ?  ????????????   ";
+		}
+
+		if (e.is_directory)
+			std::cout << ANSI_BLU << ANSI_BOLD << e.name << "/" << ANSI_RESET;
+		else
+			std::cout << e.name;
+
+		if (selected)
+			std::cout << ANSI_RESET;
+		std::cout << "\n";
+	}
+
+	// Pad blank lines
+	for (int i = end - scroll; i < avail; ++i)
+		std::cout << "\n";
+
+	// Footer
+	std::cout << ANSI_DIM
+			  << " ↑/↓ move  ↵ open  ← back  → fwd  ⌫ parent  h home  : cmd  q quit"
+			  << ANSI_RESET << "\n";
+	if (!status.empty())
+		std::cout << ANSI_YEL << " " << status << ANSI_RESET;
+	std::cout.flush();
+}
 //-----------------RAW MODE ----------------
 void disableRawMode();
 void enableRawMode();
