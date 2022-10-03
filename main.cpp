@@ -252,303 +252,354 @@ void delete_dir(string);
 string name_of_folder(string); // get path from back upto 1st '/'
 void rename(string, int, vector<string>);
 
+
+
+
 // One stat per entry, cached on the Entry. Renderer never stats again,
 // so we tolerate files vanishing mid-session.
-static std::vector<Entry> list_dir(const std::string &path)
+static std::vector<Entry> list_dir(const std::string& path) {
+    std::vector<Entry> out;
+    DIR* d = opendir(path.c_str());
+    if (!d) return out;
+    struct dirent* e;
+    while ((e = readdir(d)) != nullptr) {
+        if (std::strcmp(e->d_name, ".") == 0) continue;
+        Entry ent;
+        ent.name = e->d_name;
+        struct stat st{};
+        if (lstat((path + "/" + ent.name).c_str(), &st) == 0) {
+            ent.stat_ok = true;
+            ent.mode    = st.st_mode;
+            ent.size    = st.st_size;
+            ent.mtime   = st.st_mtime;
+            // follow symlinks for directory classification
+            if (S_ISLNK(st.st_mode)) {
+                struct stat tgt{};
+                if (stat((path + "/" + ent.name).c_str(), &tgt) == 0)
+                    ent.is_directory = S_ISDIR(tgt.st_mode);
+            } else {
+                ent.is_directory = S_ISDIR(st.st_mode);
+            }
+        }
+        out.push_back(std::move(ent));
+    }
+    closedir(d);
+    std::sort(out.begin(), out.end(), [](const Entry& a, const Entry& b) {
+        if (a.is_directory != b.is_directory) return a.is_directory > b.is_directory;
+        return a.name < b.name;
+    });
+    return out;
+}
+
+static std::string perm_string(mode_t m) {
+    std::string s;
+    s += (S_ISDIR(m) ? 'd' : '-');
+    s += (m & S_IRUSR ? 'r' : '-');
+    s += (m & S_IWUSR ? 'w' : '-');
+    s += (m & S_IXUSR ? 'x' : '-');
+    s += (m & S_IRGRP ? 'r' : '-');
+    s += (m & S_IWGRP ? 'w' : '-');
+    s += (m & S_IXGRP ? 'x' : '-');
+    s += (m & S_IROTH ? 'r' : '-');
+    s += (m & S_IWOTH ? 'w' : '-');
+    s += (m & S_IXOTH ? 'x' : '-');
+    return s;
+}
+
+static std::string human_size(off_t bytes) {
+    static const char* units[] = { "B", "K", "M", "G", "T" };
+    double v = (double)bytes;
+    int u = 0;
+    while (v >= 1024.0 && u < 4) { v /= 1024.0; ++u; }
+    std::ostringstream os;
+    os << std::fixed << std::setprecision(u == 0 ? 0 : 1) << v << units[u];
+    return os.str();
+}
+
+static std::string short_time(time_t t) {
+    char buf[32];
+    struct tm* tm = localtime(&t);
+    strftime(buf, sizeof(buf), "%b %d %H:%M", tm);
+    return buf;
+}
+
+static void render(const std::string& cwd,
+                   const std::vector<Entry>& entries,
+                   int cursor,
+                   int scroll,
+                   const std::string& status) {
+    WinSize ws = term_size();
+    int header_rows = 2;
+    int footer_rows = 2;
+    int avail = ws.rows - header_rows - footer_rows;
+    if (avail < 1) avail = 1;
+
+    clear_screen();
+
+    // Header
+    std::cout << ANSI_BOLD << ANSI_CYAN << " <LOKESH /> Terminal File Explorer " << ANSI_RESET
+              << ANSI_DIM << "  " << cwd << ANSI_RESET << "\n";
+    std::cout << ANSI_DIM
+              << " perms       size   modified         name" << ANSI_RESET << "\n";
+
+    // Body — uses cached stat from list_dir, no per-frame syscalls
+    int end = std::min((int)entries.size(), scroll + avail);
+    for (int i = scroll; i < end; ++i) {
+        const Entry& e = entries[i];
+        bool selected = (i == cursor);
+        if (selected) std::cout << ANSI_INV;
+
+        if (e.stat_ok) {
+            std::cout << " " << perm_string(e.mode) << "  "
+                      << std::setw(6) << std::right << human_size(e.size) << "  "
+                      << short_time(e.mtime) << "   ";
+        } else {
+            std::cout << " ?????????      ?  ????????????   ";
+        }
+
+        if (e.is_directory) std::cout << ANSI_BLU << ANSI_BOLD << e.name << "/" << ANSI_RESET;
+        else                std::cout << e.name;
+
+        if (selected) std::cout << ANSI_RESET;
+        std::cout << "\n";
+    }
+
+    // Pad blank lines
+    for (int i = end - scroll; i < avail; ++i) std::cout << "\n";
+
+    // Footer
+    std::cout << ANSI_DIM
+              << " ↑/↓ move  ↵ open  ← back  → fwd  ⌫ parent  h home  : cmd  q quit"
+              << ANSI_RESET << "\n";
+    if (!status.empty()) std::cout << ANSI_YEL << " " << status << ANSI_RESET;
+    std::cout.flush();
+}
+
+// --- File ops -----------------------------------------------------------------
+
+static const size_t BUF_SIZE = 8192;
+
+static int copy_file(const std::string &src, const std::string &dst)
 {
-	std::vector<Entry> out;
-	DIR *d = opendir(path.c_str());
-	if (!d)
-		return out;
-	struct dirent *e;
-	while ((e = readdir(d)) != nullptr)
+	int in = open(src.c_str(), O_RDONLY);
+	if (in < 0)
+		return -1;
+	int out = open(dst.c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (out < 0)
 	{
-		if (std::strcmp(e->d_name, ".") == 0)
-			continue;
-		Entry ent;
-		ent.name = e->d_name;
-		struct stat st{};
-		if (lstat((path + "/" + ent.name).c_str(), &st) == 0)
+		close(in);
+		return -1;
+	}
+	char buf[BUF_SIZE];
+	ssize_t n;
+	while ((n = read(in, buf, BUF_SIZE)) > 0)
+	{
+		ssize_t off = 0;
+		while (off < n)
 		{
-			ent.stat_ok = true;
-			ent.mode = st.st_mode;
-			ent.size = st.st_size;
-			ent.mtime = st.st_mtime;
-			// follow symlinks for directory classification
-			if (S_ISLNK(st.st_mode))
+			ssize_t w = write(out, buf + off, n - off);
+			if (w <= 0)
 			{
-				struct stat tgt{};
-				if (stat((path + "/" + ent.name).c_str(), &tgt) == 0)
-					ent.is_directory = S_ISDIR(tgt.st_mode);
+				close(in);
+				close(out);
+				return -1;
+			}
+			off += w;
+		}
+	}
+	close(in);
+	close(out);
+	return n < 0 ? -1 : 0;
+}
+
+// Iterative copy: pre-order, uses an explicit stack so depth is bounded by
+// heap memory, not the call stack. Safe for arbitrarily deep trees.
+static int copy_recursive(const std::string &src, const std::string &dst)
+{
+	struct stat root{};
+	if (lstat(src.c_str(), &root) != 0)
+		return -1;
+	if (!S_ISDIR(root.st_mode))
+		return copy_file(src, dst);
+
+	if (mkdir(dst.c_str(), 0755) != 0 && errno != EEXIST)
+		return -1;
+
+	std::stack<std::pair<std::string, std::string>> stk;
+	stk.push({src, dst});
+	int rc = 0;
+	while (!stk.empty())
+	{
+		auto [s, d] = stk.top();
+		stk.pop();
+		DIR *dir = opendir(s.c_str());
+		if (!dir)
+		{
+			rc = -1;
+			continue;
+		}
+		struct dirent *e;
+		while ((e = readdir(dir)) != nullptr)
+		{
+			std::string n = e->d_name;
+			if (n == "." || n == "..")
+				continue;
+			std::string ss = s + "/" + n;
+			std::string dd = d + "/" + n;
+			struct stat st{};
+			if (lstat(ss.c_str(), &st) != 0)
+			{
+				rc = -1;
+				continue;
+			}
+			if (S_ISDIR(st.st_mode))
+			{
+				if (mkdir(dd.c_str(), 0755) != 0 && errno != EEXIST)
+				{
+					rc = -1;
+					continue;
+				}
+				stk.push({ss, dd});
 			}
 			else
 			{
-				ent.is_directory = S_ISDIR(st.st_mode);
+				if (copy_file(ss, dd) != 0)
+					rc = -1;
 			}
 		}
-		out.push_back(std::move(ent));
+		closedir(dir);
 	}
-	closedir(d);
-	std::sort(out.begin(), out.end(), [](const Entry &a, const Entry &b)
-			  {
-        if (a.is_directory != b.is_directory) return a.is_directory > b.is_directory;
-        return a.name < b.name; });
-	return out;
+	return rc;
 }
 
-static std::string perm_string(mode_t m)
+// Iterative delete: collect all paths via DFS, then unlink/rmdir in reverse
+// (post-order) so directories are emptied before removal.
+static int delete_recursive(const std::string &path)
 {
-	std::string s;
-	s += (S_ISDIR(m) ? 'd' : '-');
-	s += (m & S_IRUSR ? 'r' : '-');
-	s += (m & S_IWUSR ? 'w' : '-');
-	s += (m & S_IXUSR ? 'x' : '-');
-	s += (m & S_IRGRP ? 'r' : '-');
-	s += (m & S_IWGRP ? 'w' : '-');
-	s += (m & S_IXGRP ? 'x' : '-');
-	s += (m & S_IROTH ? 'r' : '-');
-	s += (m & S_IWOTH ? 'w' : '-');
-	s += (m & S_IXOTH ? 'x' : '-');
-	return s;
-}
+	struct stat root{};
+	if (lstat(path.c_str(), &root) != 0)
+		return -1;
+	if (!S_ISDIR(root.st_mode))
+		return unlink(path.c_str());
 
-static std::string human_size(off_t bytes)
-{
-	static const char *units[] = {"B", "K", "M", "G", "T"};
-	double v = (double)bytes;
-	int u = 0;
-	while (v >= 1024.0 && u < 4)
+	std::vector<std::pair<std::string, bool>> all; // (path, is_dir)
+	std::stack<std::string> stk;
+	stk.push(path);
+	while (!stk.empty())
 	{
-		v /= 1024.0;
-		++u;
-	}
-	std::ostringstream os;
-	os << std::fixed << std::setprecision(u == 0 ? 0 : 1) << v << units[u];
-	return os.str();
-}
-
-static std::string short_time(time_t t)
-{
-	char buf[32];
-	struct tm *tm = localtime(&t);
-	strftime(buf, sizeof(buf), "%b %d %H:%M", tm);
-	return buf;
-}
-
-static void render(const std::string &cwd,
-				   const std::vector<Entry> &entries,
-				   int cursor,
-				   int scroll,
-				   const std::string &status)
-{
-	WinSize ws = term_size();
-	int header_rows = 2;
-	int footer_rows = 2;
-	int avail = ws.rows - header_rows - footer_rows;
-	if (avail < 1)
-		avail = 1;
-
-	clear_screen();
-
-	// Header
-	std::cout << ANSI_BOLD << ANSI_CYAN << " <LOKESH /> Terminal File Explorer " << ANSI_RESET
-			  << ANSI_DIM << "  " << cwd << ANSI_RESET << "\n";
-	std::cout << ANSI_DIM
-			  << " perms       size   modified         name" << ANSI_RESET << "\n";
-
-	// Body — uses cached stat from list_dir, no per-frame syscalls
-	int end = std::min((int)entries.size(), scroll + avail);
-	for (int i = scroll; i < end; ++i)
-	{
-		const Entry &e = entries[i];
-		bool selected = (i == cursor);
-		if (selected)
-			std::cout << ANSI_INV;
-
-		if (e.stat_ok)
+		std::string cur = stk.top();
+		stk.pop();
+		all.push_back({cur, true});
+		DIR *dir = opendir(cur.c_str());
+		if (!dir)
+			continue;
+		struct dirent *e;
+		while ((e = readdir(dir)) != nullptr)
 		{
-			std::cout << " " << perm_string(e.mode) << "  "
-					  << std::setw(6) << std::right << human_size(e.size) << "  "
-					  << short_time(e.mtime) << "   ";
+			std::string n = e->d_name;
+			if (n == "." || n == "..")
+				continue;
+			std::string sub = cur + "/" + n;
+			struct stat st{};
+			if (lstat(sub.c_str(), &st) != 0)
+				continue;
+			if (S_ISDIR(st.st_mode) && !S_ISLNK(st.st_mode))
+				stk.push(sub);
+			else
+				all.push_back({sub, false});
+		}
+		closedir(dir);
+	}
+	int rc = 0;
+	for (auto it = all.rbegin(); it != all.rend(); ++it)
+	{
+		if (it->second)
+		{
+			if (rmdir(it->first.c_str()) != 0)
+				rc = -1;
 		}
 		else
 		{
-			std::cout << " ?????????      ?  ????????????   ";
+			if (unlink(it->first.c_str()) != 0)
+				rc = -1;
 		}
-
-		if (e.is_directory)
-			std::cout << ANSI_BLU << ANSI_BOLD << e.name << "/" << ANSI_RESET;
-		else
-			std::cout << e.name;
-
-		if (selected)
-			std::cout << ANSI_RESET;
-		std::cout << "\n";
 	}
-
-	// Pad blank lines
-	for (int i = end - scroll; i < avail; ++i)
-		std::cout << "\n";
-
-	// Footer
-	std::cout << ANSI_DIM
-			  << " ↑/↓ move  ↵ open  ← back  → fwd  ⌫ parent  h home  : cmd  q quit"
-			  << ANSI_RESET << "\n";
-	if (!status.empty())
-		std::cout << ANSI_YEL << " " << status << ANSI_RESET;
-	std::cout.flush();
-}
-//-----------------RAW MODE ----------------
-void disableRawMode();
-void enableRawMode();
-void editorRefreshScreen()
-{
-	write(STDOUT_FILENO, "\x1b[2J", 4);
+	return rc;
 }
 
-string cwd()
+// Iterative search.
+static bool search_recursive(const std::string &root, const std::string &name)
 {
-	// string a = get_current_dir_name();
-	// return a;
-	char cwd[100];
-	getcwd(cwd, sizeof(cwd));
-	string a = cwd;
-	return a;
-}
-string prnt = cwd();
-
-int isfolder(string fileName)
-{
-	struct stat path;
-
-	stat(fileName.c_str(), &path);
-
-	return S_ISREG(path.st_mode);
-}
-
-int isDir(const char *fileName)
-{
-	struct stat path;
-
-	stat(fileName, &path);
-
-	return S_ISREG(path.st_mode);
-}
-
-void clear()
-{
-	cout << "\033[2J\033[1;1H";
-	// printf(" \033[%d;%dH", 4, 0);
-}
-
-string output_permissions(mode_t st)
-{
-	string s = "";
-
-	s += (st & S_IRUSR ? "r" : "-");
-	s += (st & S_IWUSR ? "w" : "-");
-	s += (st & S_IXUSR ? "x" : "-");
-	s += (st & S_IRGRP ? "r" : "-");
-	s += (st & S_IWGRP ? "w" : "-");
-	s += (st & S_IXGRP ? "x" : "-");
-	s += (st & S_IROTH ? "r" : "-");
-	s += (st & S_IWOTH ? "w" : "-");
-	s += (st & S_IXOTH ? "x" : "-");
-	return s;
-}
-string check_tilda(string s)
-{
-	string t = "";
-	t += s[0];
-	if (t == "~")
+	std::stack<std::string> stk;
+	stk.push(root);
+	while (!stk.empty())
 	{
-		t = s.substr(1, s.length() - 1);
-		const char *homedir;
-		if ((homedir = getenv("HOME")) == NULL)
+		std::string cur = stk.top();
+		stk.pop();
+		DIR *d = opendir(cur.c_str());
+		if (!d)
+			continue;
+		struct dirent *e;
+		while ((e = readdir(d)) != nullptr)
 		{
-			homedir = getpwuid(getuid())->pw_dir;
+			std::string n = e->d_name;
+			if (n == "." || n == "..")
+				continue;
+			if (n == name)
+			{
+				closedir(d);
+				return true;
+			}
+			std::string sub = cur + "/" + n;
+			struct stat st{};
+			if (lstat(sub.c_str(), &st) == 0 && S_ISDIR(st.st_mode) && !S_ISLNK(st.st_mode))
+				stk.push(sub);
 		}
-		t = homedir + t;
-		return t;
+		closedir(d);
 	}
-	else if (t == "/")
-	{
-		return s;
-	}
-	return "";
+	return false;
 }
 
-//---PRINT DATA OF A PARTICULAR FILE
-void print()
+// Iterative snapshot. Children are pushed in reverse order so output is sorted.
+static void snapshot_dir(const std::string &path, int /*unused_depth*/, std::ostream &os)
 {
-	struct group *grp;
-	struct passwd *pwd;
-	struct stat st;
-	for (int i = 0; i < vec_dir_list.size(); i++)
+	std::stack<std::pair<std::string, int>> stk;
+	stk.push({path, 0});
+	while (!stk.empty())
 	{
-		stat(vec_dir_list[i].c_str(), &st);
-		string perm = output_permissions(st.st_mode);
-
-		cout << setw(2) << perm << "\t";
-
-		// 2.links
-		string link = to_string(st.st_nlink);
-		cout << setw(2) << link << "\t";
-
-		// 3.group id
-		grp = getgrgid(st.st_uid);
-		// printf(" %s", grp->gr_name);
-		// temp.push_back(grp->gr_name);
-		cout << setw(2) << grp->gr_name << "\t";
-
-		// 4.person id
-		pwd = getpwuid(st.st_gid);
-		// printf(" %s", pwd->pw_name);
-		cout << setw(2) << pwd->pw_name << "\t  ";
-
-		// 5.size
-		int size = st.st_size;
-		float a = size / 1024.0;
-		cout << setw(6) << fixed << setprecision(2) << a << " KB\t  ";
-
-		// 6.modified time
-		string time = ctime(&st.st_mtime);
-		string t2 = time.substr(0, time.length() - 1);
-		cout << setw(2) << t2 << "\t";
-
-		cout << left << setw(10) << vec_dir_list[i];
-		cout << endl;
+		auto [cur, depth] = stk.top();
+		stk.pop();
+		DIR *d = opendir(cur.c_str());
+		if (!d)
+			continue;
+		std::vector<std::pair<std::string, bool>> kids;
+		struct dirent *e;
+		while ((e = readdir(d)) != nullptr)
+		{
+			std::string n = e->d_name;
+			if (n == "." || n == "..")
+				continue;
+			struct stat st{};
+			bool d_flag = (lstat((cur + "/" + n).c_str(), &st) == 0) && S_ISDIR(st.st_mode);
+			kids.push_back({n, d_flag});
+		}
+		closedir(d);
+		std::sort(kids.begin(), kids.end(),
+				  [](const auto &a, const auto &b)
+				  { return a.first < b.first; });
+		for (const auto &k : kids)
+		{
+			for (int i = 0; i < depth; ++i)
+				os << "  ";
+			os << (k.second ? "[d] " : "    ") << k.first << "\n";
+		}
+		// push in reverse so dirs traverse alphabetically
+		for (auto it = kids.rbegin(); it != kids.rend(); ++it)
+		{
+			if (it->second)
+				stk.push({cur + "/" + it->first, depth + 1});
+		}
 	}
-}
-
-//-------------Push all files of Current dir to vector------------------
-void listFiles(string dir_name)
-{
-	clear();
-
-	vec_dir_list.clear();
-	DIR *dir = opendir(dir_name.c_str());
-	if (dir == NULL)
-		return;
-
-	dirent *entity;
-	entity = readdir(dir);
-
-	struct stat st;
-
-	while (entity != NULL)
-	{
-		stat(entity->d_name, &st);
-		vec_dir_list.push_back(entity->d_name);
-		entity = readdir(dir);
-	}
-
-	// Sort on basis of name
-	sort(vec_dir_list.begin(), vec_dir_list.end());
-	// sort(file_name.begin(), file_name.end());
-
-	closedir(dir);
-	print();
 }
 
 //------------********keys -*****-(most important)--------------
