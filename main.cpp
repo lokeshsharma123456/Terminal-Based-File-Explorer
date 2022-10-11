@@ -27,36 +27,32 @@
 //   quit
 
 //----------------------------header files------------
-#include <iostream>
-#include <stdio.h>
-#include <string>
-#include <string.h>
-#include <vector>
-#include <stdlib.h>
-#include <termios.h>
-#include <unistd.h>
-#include <ctype.h>
-#include <limits.h>
-#include <dirent.h>
-#include <sys/stat.h>
 #include <algorithm>
+#include <cerrno>
+#include <csignal>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <fstream>
 #include <iomanip>
-#include <sys/ioctl.h>
+#include <iostream>
+#include <sstream>
 #include <stack>
-#include <pwd.h>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include <dirent.h>
+#include <fcntl.h>
 #include <grp.h>
-#include <signal.h>
+#include <pwd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <fstream>
-#include <fcntl.h>
-#include <cmath>
-#include <iomanip>
-#include <pwd.h>
-#include <grp.h>
+#include <termios.h>
 #include <time.h>
-#include <cstring>
-#include <dirent.h>
+#include <unistd.h>
 using namespace std;
 
 // --- ANSI helpers -------------------------------------------------------------
@@ -204,51 +200,12 @@ struct Entry
 	time_t mtime = 0;
 };
 
-//--------------------user defined--------
-#define UP 65
-#define DOWN 66
-#define RIGHT 67
-#define LEFT 68
-#define ENTER 10
-#define MODE 0777
-#define BUF_SIZE 8192
-
-//---------global items-----------------
-
-vector<string> vec_dir_list;
-int directory_position = 1;
-stack<string> back_stack;
-stack<string> forward_stack;
-string curr_dir;
-int LIST_SIZE;
-stack<string> st;
-
-//---------stat------------------
-
-static struct termios term, oterm;
-struct termios raw;
-struct termios raw_out;
-struct termios orig_termios;
-
-//----------------FUNCTION PROTOTYPES------------
 
 void keys(string);
 void enableRawMode();
 void disableRawMode();
 void enableRawMode2();
-void createdir(string, string);
-int search(string, string);
-vector<string> getcommand();
-void create_file(string, string);
-void create_dir(string, string);
-void delete_dir(string);
-void keys(string);
-void copy_file(string, string);
-void copy_dir(string, string);
-void move_file(string, string);
 void move_dir(string, string);
-void delete_file(string);
-void delete_dir(string);
 string name_of_folder(string); // get path from back upto 1st '/'
 void rename(string, int, vector<string>);
 
@@ -603,778 +560,468 @@ static void snapshot_dir(const std::string &path, int /*unused_depth*/, std::ost
 }
 
 //------------********keys -*****-(most important)--------------
+// --- Command mode -------------------------------------------------------------
 
-void keys(string pwd)
+// Shell-like tokenizer:
+//   * single and double quotes preserve spaces inside
+//   * backslash escapes the next character (inside or outside quotes)
+//     e.g. create_file "my file.txt" /home   or   move my\ file.txt /tmp
+static std::vector<std::string> tokenize(const std::string &s)
 {
-	LIST_SIZE = vec_dir_list.size();
-	cout << LIST_SIZE << endl;
-	int pos = 0;
-	char ch;
-	curr_dir = cwd();
-	printf(" \e[H");
-	while (1)
+	std::vector<std::string> out;
+	std::string cur;
+	bool in_token = false;
+	char quote = 0;
+	for (size_t i = 0; i < s.size(); ++i)
 	{
-		ch = cin.get();
-		if (ch == DOWN)
+		char c = s[i];
+		if (quote)
 		{
-			if (pos < LIST_SIZE)
+			if (c == '\\' && i + 1 < s.size())
 			{
-
-				pos++;
-				directory_position = pos;
-
-				printf("%c[%d;%df", 0x1B, pos, 1);
-				// cout << pos;
-			}
-		}
-		else if (ch == UP)
-		{
-			if (pos >= 0)
-			{
-				pos--;
-				directory_position = pos;
-
-				printf("%c[%d;%df", 0x1B, pos, 1);
-				// cout << pos;
-			}
-		}
-		else if (ch == ENTER)
-		{
-			struct stat st;
-
-			string s = pwd;
-			s += "/" + vec_dir_list[directory_position - 1];
-
-			stat(s.c_str(), &st);
-
-			if ((st.st_mode & S_IFMT) == S_IFDIR)
-			{
-
-				back_stack.push(pwd);
-				pwd = s;
-				curr_dir = pwd;
-				cout << "curr_dir :" << curr_dir << endl;
-				clear();
-				vec_dir_list.clear();
-				// cout << s << "-----------------" << endl;
-				directory_position = 1;
-				listFiles(s);
-				keys(s);
-			}
-			else if ((st.st_mode & S_IFMT) == S_IFREG)
-			{
-				pid_t pid = fork();
-				if (pid == 0)
-				{
-					execlp("xdg-open", "xdg-open", s.c_str(), NULL);
-					exit(0);
-				}
-			}
-		}
-		else if (ch == LEFT)
-		{
-			if (!back_stack.empty())
-			{
-				clear();
-				string s = back_stack.top();
-				forward_stack.push(s); // current push to forward
-				back_stack.pop();
-				listFiles(s);
-				keys(s);
-			}
-		}
-		else if (ch == RIGHT)
-		{
-
-			if (!forward_stack.empty())
-			{
-				clear();
-				string s = forward_stack.top();
-				forward_stack.pop();
-				back_stack.push(pwd);
-				listFiles(s);
-				keys(s);
-			}
-		}
-		else if (ch == 127) // backspace
-		{
-			clear();
-
-			// int i;
-			// for (i = prnt.length() - 1; prnt[i] != '/' && i >= 0; i--);
-			// prnt = prnt.substr(0, i);
-			back_stack.push(curr_dir);
-			// pwd = prnt;
-			curr_dir += "/";
-			curr_dir += "..";
-			listFiles(curr_dir);
-		}
-		else if (ch == 104) // home directrotry
-		{
-			clear();
-			const char *homedir;
-
-			if ((homedir = getenv("HOME")) == NULL)
-			{
-				homedir = getpwuid(getuid())->pw_dir;
-			}
-			back_stack.push(curr_dir);
-			pwd = string(homedir);
-
-			curr_dir = string(homedir);
-			listFiles(pwd);
-			keys(pwd);
-		}
-		else if (ch == 'q')
-		{
-			printf("\033c");
-			return;
-		}
-		else if (ch == ':')
-		{
-			// clear();
-			disableRawMode();
-			enableRawMode2();
-			// editorRefreshScreen();
-			// cout << "YOU ARE IN COMMAND MODE : \n";
-			// char c = cin.get();
-
-			struct winsize w;
-			ioctl(0, TIOCGWINSZ, &w);
-			int rows = w.ws_row;
-			int a = rows - 12;
-
-			printf("\033[%d;1H", a);
-			printf("\033[0;36m"
-				   "COMMAND MODE STARTED:\n ");
-			cout << "CURRENT PATH IS :" << curr_dir << endl;
-			cout << "$ ";
-
-			while (1)
-			{
-				char c;
-				vector<string> v;
-				v = getcommand();
-
-				if (v[0] == "rename")
-				{
-					if (v.size() != 3)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG FILE NAME :\n";
-						break;
-					}
-					rename(pwd, a, v);
-				}
-				else if (v[0] == "27") // to escape
-				{
-
-					enableRawMode();
-					clear();
-					listFiles(curr_dir);
-					keys(curr_dir);
-				}
-				else if (v[0] == "quit")
-				{ // write quit then space then enter to quit
-
-					printf("\033c");
-					return;
-				}
-				else if (v[0] == "goto")
-				{
-
-					if (v.size() != 2)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-
-					curr_dir = check_tilda(v[1]);
-					pwd = curr_dir;
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string s = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << s << endl;
-					cout << "$ ";
-				}
-				else if (v[0] == "create_file")
-				{
-					if (v.size() != 3)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					string path = check_tilda(v[2]);
-
-					create_file(v[1], path);
-					pwd = curr_dir;
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string s = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << s << endl;
-					cout << "$ ";
-				}
-				else if (v[0] == "create_dir") // create_dir
-				{
-
-					if (v.size() != 3)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					string path = check_tilda(v[2]);
-					create_dir(v[1], path);
-					pwd = curr_dir;
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string s = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << s << endl;
-					cout << "$ ";
-				}
-				else if (v[0] == "search") // search file or folder
-				{
-					if (v.size() != 2)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					int t = search(v[1], ".");
-					if (t == 1)
-						cout << "TRUE";
-					else
-						cout << "FALSE";
-				}
-				else if (v[0] == "delete_file")
-				{
-					if (v.size() != 2)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					string s = check_tilda(v[1]);
-					s += "/" + v[1];
-					if (remove(v[1].c_str()))
-						cout << "fail";
-					else
-						cout << "success";
-
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string st = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << st << endl;
-					cout << "$ ";
-				}
-				else if (v[0] == "delete_dir")
-				{
-					if (v.size() != 2)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					// string s = check_tilda(v[1]);
-					// s += "/" + v[1];
-					delete_dir(v[1]); // complete path name pr hi kaam karega
-
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string st = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << st << endl;
-					cout << "$ ";
-				}
-				else if (v[0] == "copy")
-				{
-					if (v.size() < 3)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					for (int i = 1; i <= v.size() - 2; i++)
-					{
-						string des_path = check_tilda(v[v.size() - 1]);
-
-						if (!isfolder(v[i])) // opposite return true k liye 0
-						{
-							des_path += "/" + v[i];
-							mkdir(des_path.c_str(), 0777);
-
-							string sa = get_current_dir_name();
-							string source_foldr = sa + "/" + v[i];
-
-							copy_dir(source_foldr, des_path);
-						}
-						else
-						{
-							string s = curr_dir + "/" + v[i];
-							cout << "\n\n\n\n\n\n\n:::::: " << curr_dir << "  \n:::\n\n\n\n\n";
-							copy_file(s, des_path);
-						}
-					}
-					pwd = curr_dir;
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string s = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << s << endl;
-					cout << "$ ";
-				}
-				else if (v[0] == "move")
-				{
-					if (v.size() < 3)
-					{
-						clear();
-						pwd = curr_dir;
-						listFiles(pwd);
-						printf("\033[%d;1H", a);
-						printf("\033[0;36m"
-							   "COMMAND MODE STARTED:\n ");
-						cout << "WRONG COMMAND :\n";
-						cout << "CURRENT PATH IS :" << curr_dir << endl;
-						cout << "$ ";
-						break;
-					}
-					for (int i = 1; i <= v.size() - 2; i++)
-					{
-						string des_path = check_tilda(v[v.size() - 1]);
-						if (!isfolder(des_path)) // opposite return true k liye 0
-						{
-							string folder_n = curr_dir + "/" + v[i];
-							des_path += "/" + v[i];
-							move_dir(folder_n, des_path);
-						}
-						else
-						{
-							string s = curr_dir + "/" + v[i];
-							move_file(s, des_path);
-						}
-					}
-					pwd = curr_dir;
-					clear();
-					listFiles(pwd);
-					// keys(pwd);
-					printf("\033[%d;1H", a);
-					printf("\033[0;36m"
-						   "COMMAND MODE STARTED:\n ");
-					string s = realpath(curr_dir.c_str(), NULL);
-					cout << "CURRENT PATH IS :" << s << endl;
-					cout << "$ ";
-				}
-			}
-		}
-	}
-}
-
-void rename(string pwd, int a, vector<string> v)
-{
-	string s = curr_dir;
-	cout << "curr_dir: " << curr_dir << endl;
-	string aa = "";
-	string b = "";
-	aa += s + "/" + v[1];
-	b += s + "/" + v[2];
-	int result = rename(aa.c_str(), b.c_str());
-	clear();
-	pwd = curr_dir;
-	listFiles(pwd);
-	printf("\033[%d;1H", a);
-	printf("\033[0;36m"
-		   "COMMAND MODE STARTED:\n ");
-	string ss = realpath(curr_dir.c_str(), NULL);
-	if (result == 0)
-		cout << "successful rename\n";
-	else
-		cout << "Write file name carefully\n";
-	cout << "CURRENT PATH IS :" << ss << endl;
-	cout << "$ ";
-}
-void move_file(string fileName, string destination)
-{
-	copy_file(fileName, destination);
-
-	if (remove(fileName.c_str()))
-		cout << "fail";
-	else
-		cout << "success";
-	return;
-}
-
-void move_dir(string source, string destination)
-{
-
-	int result = rename(source.c_str(), destination.c_str());
-	if (result == 0)
-		cout << "success";
-	else
-		cout << "something went wrong";
-}
-
-void copy_file(string sr, string dt)
-{
-
-	int src, dst, in, out;
-	char buf[BUF_SIZE];
-	// if (argc != 3) exit(1);
-
-	src = open(sr.c_str(), O_RDONLY);
-	if (src < 0)
-		exit(2);
-	// dt += "/" + sr;//complete path +name
-	dst = creat(dt.c_str(), MODE);
-	if (dst < 0)
-		exit(3);
-	while (1)
-	{
-		in = read(src, buf, BUF_SIZE);
-		if (in <= 0)
-			break;
-		out = write(dst, buf, in);
-		if (out <= 0)
-			break;
-	}
-	close(src);
-	close(dst);
-	return;
-}
-
-void copy_dir(string folderName, string destination)
-{
-
-	DIR *dir = opendir(folderName.c_str());
-	if (dir == NULL)
-	{
-		printf("no such source directory found\n");
-		return;
-	}
-	// cout << folderName << endl;
-
-	struct dirent *entity;
-	while ((entity = readdir(dir)) != NULL)
-	{
-		// printf("%hhd  %s\n", entity->d_type,   entity->d_name);
-		if (string(entity->d_name) == "." || string(entity->d_name) == "..")
-		{
-			// cout << string(entity->d_name) << endl;
-			continue;
-		}
-		else
-		{
-			string s = string(entity->d_name);
-			string source_path = folderName + "/" + entity->d_name;
-			struct stat tmp;
-			if (stat(source_path.c_str(), &tmp) == -1)
-			{
-				printf(" cannot get souurce  stat\n");
+				cur += s[++i];
 				continue;
 			}
-			if (!isfolder(source_path))
+			if (c == quote)
 			{
-				string dest_path = destination + "/" + entity->d_name;
-				mkdir(dest_path.c_str(), 0777);
-				copy_dir(source_path, dest_path);
+				quote = 0;
+				continue;
 			}
-			else
-			{
-				string dest_path = destination + "/" + entity->d_name;
-				copy_file(source_path, dest_path);
-			}
-
-			// cout << "entity name: " << s << endl;
-			// cout << "source_path:" << source_path << endl;
-			// cout << "destination_path" << dest_path << endl;
+			cur += c;
 		}
-	}
-	closedir(dir);
-
-	return;
-}
-
-void create_file(string Name, string folder) // create_file
-{
-	string s = folder;
-	s += "/" + Name;
-	FILE *file = fopen(s.c_str(), "w+");
-	fclose(file);
-}
-
-void create_dir(string Name, string folder)
-{
-
-	string s = folder;
-	s += "/" + Name;
-	mkdir(s.c_str(), 0775);
-}
-
-string name_of_folder(string path) // last piche se folder
-{
-	string a = "";
-	for (int i = path.length() - 1; i >= 0; --i)
-	{
-		string m = "";
-		m += path[i];
-		if (m != "/")
-			a += m;
-		else
-			break;
-	}
-
-	path = "";
-	for (int i = a.length() - 1; i >= 0; i--)
-	{
-		path += a[i];
-	}
-	return path;
-}
-
-int search(string Name, string folder)
-{
-	DIR *dir = opendir(folder.c_str());
-	if (dir == NULL)
-	{
-		return 0;
-	}
-	struct dirent *entity;
-	entity = readdir(dir);
-	while (entity != NULL)
-	{
-		if (entity->d_type == DT_DIR && strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0)
+		else if (c == '"' || c == '\'')
 		{
-			string folder_name = name_of_folder(folder);
-			if (Name == entity->d_name)
+			quote = c;
+			in_token = true;
+		}
+		else if (c == '\\' && i + 1 < s.size())
+		{
+			cur += s[++i];
+			in_token = true;
+		}
+		else if (c == ' ' || c == '\t')
+		{
+			if (in_token)
 			{
-				return 1;
+				out.push_back(cur);
+				cur.clear();
+				in_token = false;
 			}
-
-			char path[100] = {0};
-			strcat(path, folder.c_str());
-			strcat(path, "/");
-			strcat(path, entity->d_name);
-			if ((search(Name, path)))
-				return 1;
 		}
 		else
 		{
-			if (entity->d_name == Name)
+			cur += c;
+			in_token = true;
+		}
+	}
+	if (in_token)
+		out.push_back(cur);
+	return out;
+}
+
+static std::string err_msg(const std::string &prefix)
+{
+	return prefix + ": " + std::strerror(errno);
+}
+
+// Returns a status message for the next render. Sets `quit` if user asked to exit.
+// Sets `new_cwd` if the user goto'd somewhere.
+static std::string run_command(const std::vector<std::string> &v,
+							   const std::string &cwd,
+							   std::string &new_cwd,
+							   bool &quit)
+{
+	if (v.empty())
+		return "";
+	const std::string &cmd = v[0];
+
+	auto need = [&](size_t n) -> bool
+	{
+		return v.size() == n;
+	};
+
+	if (cmd == "quit" || cmd == "exit")
+	{
+		quit = true;
+		return "bye.";
+	}
+	if (cmd == "help")
+	{
+		return "goto|create_file|create_dir|delete_file|delete_dir|copy|move|rename|search|snapshot|quit";
+	}
+
+	if (cmd == "goto")
+	{
+		if (!need(2))
+			return "usage: goto <path>";
+		std::string p = resolve_path(v[1], cwd);
+		if (!is_dir(p))
+			return "not a directory: " + p;
+		new_cwd = p;
+		return "moved to " + p;
+	}
+	if (cmd == "create_file")
+	{
+		if (!need(3))
+			return "usage: create_file <name> <path>";
+		std::string dir = resolve_path(v[2], cwd);
+		if (!is_dir(dir))
+			return "not a directory: " + dir;
+		if (access(dir.c_str(), W_OK) != 0)
+			return err_msg("no write permission on " + dir);
+		std::string full = dir + "/" + v[1];
+		std::ofstream f(full);
+		return f ? "created " + full : err_msg("create_file " + full);
+	}
+	if (cmd == "create_dir")
+	{
+		if (!need(3))
+			return "usage: create_dir <name> <path>";
+		std::string dir = resolve_path(v[2], cwd);
+		if (!is_dir(dir))
+			return "not a directory: " + dir;
+		if (access(dir.c_str(), W_OK) != 0)
+			return err_msg("no write permission on " + dir);
+		std::string full = dir + "/" + v[1];
+		return mkdir(full.c_str(), 0755) == 0 ? "created " + full : err_msg("create_dir " + full);
+	}
+	if (cmd == "delete_file")
+	{
+		if (!need(2))
+			return "usage: delete_file <path>";
+		std::string p = resolve_path(v[1], cwd);
+		return unlink(p.c_str()) == 0 ? "deleted " + p : err_msg("delete_file " + p);
+	}
+	if (cmd == "delete_dir")
+	{
+		if (!need(2))
+			return "usage: delete_dir <path>";
+		std::string p = resolve_path(v[1], cwd);
+		return delete_recursive(p) == 0 ? "deleted " + p : err_msg("delete_dir " + p);
+	}
+	if (cmd == "copy")
+	{
+		if (!need(3))
+			return "usage: copy <src> <dest>";
+		std::string s = resolve_path(v[1], cwd);
+		std::string d = resolve_path(v[2], cwd);
+		if (access(s.c_str(), R_OK) != 0)
+			return err_msg("cannot read " + s);
+		if (is_dir(d))
+		{
+			std::string base = v[1];
+			auto pos = base.find_last_of('/');
+			if (pos != std::string::npos)
+				base = base.substr(pos + 1);
+			d += "/" + base;
+		}
+		return copy_recursive(s, d) == 0 ? "copied " + s + " -> " + d
+										 : err_msg("copy " + s);
+	}
+	if (cmd == "move")
+	{
+		if (!need(3))
+			return "usage: move <src> <dest>";
+		std::string s = resolve_path(v[1], cwd);
+		std::string d = resolve_path(v[2], cwd);
+		if (is_dir(d))
+		{
+			std::string base = v[1];
+			auto pos = base.find_last_of('/');
+			if (pos != std::string::npos)
+				base = base.substr(pos + 1);
+			d += "/" + base;
+		}
+		if (rename(s.c_str(), d.c_str()) == 0)
+			return "moved " + s + " -> " + d;
+		if (errno != EXDEV)
+			return err_msg("move " + s);
+		// cross-device fallback
+		if (copy_recursive(s, d) != 0)
+			return err_msg("move (copy phase) " + s);
+		if (delete_recursive(s) != 0)
+			return err_msg("move (delete phase) " + s);
+		return "moved " + s + " -> " + d;
+	}
+	if (cmd == "rename")
+	{
+		if (!need(3))
+			return "usage: rename <old> <new>";
+		std::string a = resolve_path(v[1], cwd);
+		std::string b = resolve_path(v[2], cwd);
+		return rename(a.c_str(), b.c_str()) == 0 ? "renamed" : err_msg("rename");
+	}
+	if (cmd == "search")
+	{
+		if (!need(2))
+			return "usage: search <name>";
+		return search_recursive(cwd, v[1]) ? "found: " + v[1] : "not found: " + v[1];
+	}
+	if (cmd == "snapshot")
+	{
+		if (!need(2))
+			return "usage: snapshot <path>";
+		std::string p = resolve_path(v[1], cwd);
+		if (!is_dir(p))
+			return "not a directory: " + p;
+		std::cout << "\n"
+				  << ANSI_BOLD << "snapshot of " << p << ANSI_RESET << "\n";
+		snapshot_dir(p, 0, std::cout);
+		std::cout << "\n[press any key]" << std::flush;
+		std::cin.get();
+		return "snapshot done";
+	}
+	return "unknown command: " + cmd + " (try 'help')";
+}
+
+// --- Open file in xdg-open ---------------------------------------------------
+
+static void open_with_default(const std::string &path)
+{
+	pid_t pid = fork();
+	if (pid == 0)
+	{
+		// child: detach from terminal
+		int fd = open("/dev/null", O_RDWR);
+		if (fd >= 0)
+		{
+			dup2(fd, 1);
+			dup2(fd, 2);
+			close(fd);
+		}
+		execlp("xdg-open", "xdg-open", path.c_str(), (char *)nullptr);
+		_exit(127);
+	}
+	// don't wait — let viewer live independently
+}
+
+// --- Main loop ----------------------------------------------------------------
+
+static int read_key()
+{
+	char c;
+	if (read(STDIN_FILENO, &c, 1) != 1)
+		return -1;
+	if (c == '\x1b')
+	{
+		char seq[3];
+		if (read(STDIN_FILENO, &seq[0], 1) != 1)
+			return '\x1b';
+		if (read(STDIN_FILENO, &seq[1], 1) != 1)
+			return '\x1b';
+		if (seq[0] == '[')
+		{
+			switch (seq[1])
 			{
-				return 1;
+			case 'A':
+				return 1000; // up
+			case 'B':
+				return 1001; // down
+			case 'C':
+				return 1002; // right
+			case 'D':
+				return 1003; // left
 			}
 		}
-		entity = readdir(dir);
+		return '\x1b';
 	}
-	closedir(dir);
-	return 0;
-}
-
-void delete_dir(string dirname)
-{
-	DIR *dir = opendir(dirname.c_str());
-	if (dir == NULL)
-	{
-		return;
-	}
-
-	int count = 5;
-	// printf("Reading files in: %s\n", dirname);
-
-	struct dirent *entity;
-	while ((entity = readdir(dir)) != NULL && (count-- > 0))
-	{
-		if (entity->d_name == "." || entity->d_name == "..")
-			continue;
-		else if (entity->d_type == DT_DIR && strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0)
-		{
-			string path = dirname + "/" + entity->d_name;
-			// cout << "foldr_name: " << entity->d_name << endl;
-			delete_dir(path);
-		}
-		else
-		{
-			string path = dirname + "/" + entity->d_name;
-			// cout << "\n--fiile:  " << entity->d_name << endl;
-			// cout << "file_path: " << path << endl;
-			if (strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0)
-			{
-				int status = remove(path.c_str());
-				if (status == 0)
-					cout << "\nFile Deleted Successfully!\n";
-				else
-					cout << "\nIN FILE Error Occurred!\n";
-			}
-		}
-	}
-	closedir(dir);
-
-	// string path = dirname + "/" + entity->d_name;
-	// cout << "foldr_name: " << dirname << endl;
-	int status = remove(dirname.c_str());
-
-	if (status == 0)
-		cout << "\nFOLDER Deleted Successfully!\n";
-	else
-		cout << "\nIN FOLDER Error Occurred!\n";
-	return;
-}
-
-void enableRawMode2()
-{
-	tcgetattr(STDIN_FILENO, &orig_termios);
-	atexit(disableRawMode);
-	struct termios raw = orig_termios;
-	raw.c_lflag &= ~(ICANON);
-	tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
-}
-
-void disableRawMode()
-{
-	tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
-}
-
-void enableRawMode()
-{
-	tcgetattr(STDIN_FILENO, &orig_termios);
-	atexit(disableRawMode);
-	struct termios raw = orig_termios;
-	raw.c_lflag &= ~(ECHO | ICANON);
-	tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
-}
-
-vector<string> getcommand()
-{
-
-	char ch;
-	string s;
-
-	getline(cin, s);
-
-	//-------------------------------------------------
-	// string s = "";
-	// char c;
-	// c = cin.get();
-	// while (c != 10)
-	// {
-	// 	if (c != 127)
-	// 	{
-	// 		s += c;
-	// 	}
-	// 	else if (c == 127)
-	// 	{
-	// 		printf ("\033[0K");
-	// 		s = s.substr(0, s.length() - 1);
-	// 		cout << s;
-	// 	}
-	// 	c = cin.get();
-	// }
-	//---------------------------------------------------------
-	vector<string> v;
-	string input = "";
-	for (int i = 0; i < s.length(); ++i)
-	{
-		string m = "";
-		m += s[i];
-		if (m != " ")
-		{
-			input += m;
-		}
-		else if (m == " ")
-		{
-			v.push_back(input);
-			input = "";
-		}
-	}
-	v.push_back(input);
-	return v;
+	return (unsigned char)c;
 }
 
 int main()
 {
-	clear();
-	enableRawMode(); // enable to get into canonicall mode
-	// /get_current_dir_name()
-	curr_dir = get_current_dir_name(); // global path
-	back_stack.push(curr_dir);
-	listFiles(curr_dir);
-	keys(curr_dir);
+	install_signal_handlers();
+	std::string cwd = get_cwd();
+	std::stack<std::string> back, fwd;
+
+	auto entries = list_dir(cwd);
+	int cursor = 0, scroll = 0;
+	std::string status;
+
+	enable_raw_mode();
+
+	auto refresh = [&](const std::string &msg = "")
+	{
+		WinSize ws = term_size();
+		int avail = ws.rows - 4;
+		if (avail < 1)
+			avail = 1;
+		if (cursor < 0)
+			cursor = 0;
+		if (cursor >= (int)entries.size())
+			cursor = std::max(0, (int)entries.size() - 1);
+		if (cursor < scroll)
+			scroll = cursor;
+		if (cursor >= scroll + avail)
+			scroll = cursor - avail + 1;
+		render(cwd, entries, cursor, scroll, msg);
+	};
+	refresh();
+
+	while (true)
+	{
+		int k = read_key();
+		if (k < 0)
+			break;
+
+		switch (k)
+		{
+		case 1000: // up
+			if (cursor > 0)
+				--cursor;
+			refresh();
+			break;
+		case 1001: // down
+			if (cursor + 1 < (int)entries.size())
+				++cursor;
+			refresh();
+			break;
+		case 1003: // left = back
+			if (!back.empty())
+			{
+				fwd.push(cwd);
+				cwd = back.top();
+				back.pop();
+				if (chdir(cwd.c_str()) != 0)
+				{
+				}
+				entries = list_dir(cwd);
+				cursor = 0;
+				scroll = 0;
+			}
+			refresh();
+			break;
+		case 1002: // right = forward
+			if (!fwd.empty())
+			{
+				back.push(cwd);
+				cwd = fwd.top();
+				fwd.pop();
+				if (chdir(cwd.c_str()) != 0)
+				{
+				}
+				entries = list_dir(cwd);
+				cursor = 0;
+				scroll = 0;
+			}
+			refresh();
+			break;
+		case 127:
+		{ // backspace -> parent
+			std::string parent = cwd;
+			auto pos = parent.find_last_of('/');
+			if (pos == 0)
+				parent = "/";
+			else if (pos != std::string::npos)
+				parent = parent.substr(0, pos);
+			if (parent != cwd && is_dir(parent))
+			{
+				back.push(cwd);
+				cwd = parent;
+				if (chdir(cwd.c_str()) != 0)
+				{
+				}
+				entries = list_dir(cwd);
+				cursor = 0;
+				scroll = 0;
+				while (!fwd.empty())
+					fwd.pop();
+			}
+			refresh();
+			break;
+		}
+		case 'h':
+		{
+			back.push(cwd);
+			cwd = home_dir();
+			if (chdir(cwd.c_str()) != 0)
+			{
+			}
+			entries = list_dir(cwd);
+			cursor = 0;
+			scroll = 0;
+			while (!fwd.empty())
+				fwd.pop();
+			refresh();
+			break;
+		}
+		case '\n':
+		case '\r':
+		{
+			if (entries.empty())
+			{
+				refresh();
+				break;
+			}
+			const Entry &e = entries[cursor];
+			std::string full = cwd + "/" + e.name;
+			if (e.name == "..")
+			{
+				auto pos = cwd.find_last_of('/');
+				full = (pos == 0) ? "/" : cwd.substr(0, pos);
+			}
+			if (is_dir(full))
+			{
+				back.push(cwd);
+				while (!fwd.empty())
+					fwd.pop();
+				cwd = full;
+				if (chdir(cwd.c_str()) != 0)
+				{
+				}
+				entries = list_dir(cwd);
+				cursor = 0;
+				scroll = 0;
+				refresh();
+			}
+			else
+			{
+				open_with_default(full);
+				refresh("opened " + e.name);
+			}
+			break;
+		}
+		case ':':
+		{
+			disable_raw_mode();
+			WinSize ws = term_size();
+			move_cursor(ws.rows, 1);
+			clear_line();
+			std::cout << ANSI_GRN << ":" << ANSI_RESET << std::flush;
+			std::string line;
+			std::getline(std::cin, line);
+			bool quit = false;
+			std::string new_cwd;
+			std::string msg = run_command(tokenize(line), cwd, new_cwd, quit);
+			if (quit)
+			{
+				clear_screen();
+				return 0;
+			}
+			if (!new_cwd.empty())
+			{
+				back.push(cwd);
+				while (!fwd.empty())
+					fwd.pop();
+				cwd = new_cwd;
+				if (chdir(cwd.c_str()) != 0)
+				{
+				}
+			}
+			entries = list_dir(cwd);
+			if (cursor >= (int)entries.size())
+				cursor = 0;
+			enable_raw_mode();
+			refresh(msg);
+			break;
+		}
+		case 'q':
+			clear_screen();
+			return 0;
+		default:
+			refresh();
+			break;
+		}
+	}
 	return 0;
 }
