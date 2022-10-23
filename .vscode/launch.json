@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/New folder/github uploads/Terminal-Based-File-Explorer",
-      "program": "e:/New folder/github uploads/Terminal-Based-File-Explorer/build/Debug/outDebug",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/explorer",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

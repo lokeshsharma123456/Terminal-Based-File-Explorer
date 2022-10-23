@@ -1,0 +1,12 @@
+# Build output
+explorer
+*.o
+build/
+
+# IDE and editor state
+.vscode/*.user
+.vscode/.browse.VC.db*
+
+# Local notes and temporary files
+*.log
+*.tmp
